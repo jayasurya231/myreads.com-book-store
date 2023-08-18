@@ -1,0 +1,602 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Tektur&family=Yatra+One&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+#navbar{
+    /* position: sticky;
+    top: 0;
+    left: 0; */
+    padding: 10px 10px;
+    z-index: 100;
+    box-shadow: 2px 2px 20px rgba(0, 0, 0, .2);
+    
+    
+}
+.navbar .navbar-toggler{
+    font-size: 15px;
+    padding: 5px;
+}
+
+.navbar .navbar-brand img{
+    width: 100px;
+}
+#navbarSupportedContent a{
+    color: black;
+}
+#navbarSupportedContent a:hover{
+    border-bottom: 2px solid rgb(13, 115, 248);
+}
+#navbarSupportedContent button{
+    padding: 7px;
+    border-radius: 13px;
+    margin-right: 20px;
+}
+
+
+section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    min-height: 100vh;
+}
+
+
+/* home */
+
+
+#home{
+    background:linear-gradient(rgba(0,0,0,.7),rgba(0,0,0,.9)),url(imgs/background.png);
+    background-repeat: no-repeat;
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    flex-direction: column;
+}
+.headline{
+    font-size: 80px;
+    font-weight: 900;
+    color: white;
+    text-transform: capitalize;
+    text-align: center;
+    margin-top: 100px;
+}
+#home .repeat p{
+    font-size: 1rem;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    padding-right: 5px;
+    color: white;
+    text-transform: capitalize;
+}
+.repeat{
+    display: flex;
+    flex-direction: row;
+}
+.repeat p::first-letter{
+    color: dodgerblue;
+    font-size: 1.5rem;
+}
+.home-btn{
+    border: transparent;
+    margin-top: 10px;
+}
+.home-btn a{
+    background: dodgerblue;
+    padding: 10px;
+    border-radius: 10px;
+    color: white;
+    text-decoration: none;
+}
+/* About */
+#about .row img{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+
+.row .website{
+    color: dodgerblue;
+}
+
+
+/* products */
+
+#products h2{
+    font-size: 30px;
+   font-weight: 700;
+   letter-spacing: 2px;
+   margin-top: -20px;
+}
+#products img{
+    width: 200px;
+    height: 250px;
+}
+.card{
+    justify-content: center;
+    width: 250px;
+    height: 100px;
+    margin-left: 20px;
+    margin-bottom: 20px;
+   
+}
+#row{
+    margin-top: 120px;
+}
+#products .dropdown{
+    text-align: left;
+    margin-top: 60px;
+    margin-left: -30px;
+}
+.dropdown .btn{
+    background-color: dodgerblue !important;
+    border:transparent;
+    color: white !important;
+}
+.dropdown .btn:hover{
+    box-shadow: 3px 3px 10px rgb(84, 85, 85);
+
+}
+.card{
+    overflow: hidden;
+    border-radius: 10px !important;
+    box-shadow: 15px 20px 20px rgba(0, 0, 0,.1),
+                inset 4px 4px 10px white;
+}
+.card .btn svg{
+    color:  white !important;
+    width: 15px;
+}
+.card .btn{
+    background-color: dodgerblue;
+}
+
+.card .btn:hover{
+    background-color: dodgerblue;
+    color: dodgerblue;
+}
+.row .card .btn:hover{
+    color: white;
+}
+
+/* cart */
+.cart .cart-box img{
+    width: 100px ;
+}
+.cart{
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 400px;
+    height: 100vh;
+    overflow-y: auto;
+    overflow-x: hidden;
+    background: white;
+    padding: 20px;
+}
+.cart-active{
+    right: 0;
+    z-index: 100;
+    transition: 0.5s;
+}
+.cart-title{
+    text-align: center;
+    font-size: 1.2rem;
+    font-weight: 500;
+    margin-bottom: 1rem;
+    padding-bottom: 10px;
+    border-bottom: 1px solid rgba(0,0, 0, 0.5);
+}
+.cart-box {
+    display: grid;
+    grid-template-columns: 32% 50% 18%;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 1rem;
+    border-bottom: 1px solid rgba(0,0, 0, 0.3);
+    padding-bottom: 10px;
+}
+#cart-quantity{
+    outline: none;
+    width: 2.5rem;
+    text-align: center;
+}
+.cart-img{
+    width: 85px;
+    height: 85px;
+    object-fit: contain;
+    border: 1px solid rgba(0,0, 0, 0.2);
+    padding: 5px;
+}
+
+.detail-box{
+    display: grid;
+    row-gap: 0.5rem;
+}
+
+.price-box{
+    display: flex;
+    justify-content: space-between;
+}
+.cart-book-title{
+    text-transform: capitalize;
+    color: dodgerblue;
+}
+.cart-price{
+    font-weight: 600;
+}
+.cart-remove{
+    color: red;
+    cursor: pointer;
+    width: 20px;
+    height: 20px;
+
+}
+
+
+.total{
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 1rem;
+}
+
+.total-title{
+    font-weight: 600;
+}
+
+.total-price{
+    margin-left: 5px;
+}
+
+.btn-buy{
+    padding: 12px 20px;
+    background: dodgerblue;
+   font-size: 1rem;
+    border: none;
+    cursor: pointer;
+    border-radius: 20px;
+}
+
+.close-btn{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+    margin-top: 5px;
+    cursor: pointer;    
+}
+
+
+/* cart-btn */
+#toCart{
+    position: absolute;
+    right: 0;
+    top: 1;
+    margin-top: -45px;
+    margin-right: 40px;
+}
+#toCart svg{
+    width:100%;
+    height: 35px;
+    padding-bottom: 3px;
+    border-bottom: 3px solid dodgerblue;
+    border-radius: 5px;
+}
+
+
+
+
+
+
+
+/* Testimonial */
+
+.section-header{
+    position: relative;
+    padding-bottom: 10px;
+    text-align: center;
+    font-weight: 900;
+    padding-bottom: 25px;
+    color: #070606;
+    text-align: center;
+}
+.section-header:after{
+    content: '';
+    height: 3px;
+    width: 200px;
+    position: absolute;
+    bottom: 0;
+    left: calc(50% - 100px);
+    background: #fff;
+}
+.section-header span {
+	display: block;
+	font-size: 15px;
+	font-weight: 300;
+}
+.testimonials{
+    max-width: 1000px;
+    padding: 0 15px 50px;
+    margin: 0 auto 80px auto;
+}
+.single-item{
+    background: #fff;
+    color: #111;
+    padding: 15px;
+    margin: 50px 15px;
+}
+.profile{
+    margin-bottom: 30px;
+    text-align: center;    
+}
+.img-area {
+	margin: 0 15px 15px 15px;
+}
+.img-area img {
+	height: 200px;
+	width: 200px;
+	border-radius: 50%;
+	border: 7px solid dodgerblue;
+}
+.content{
+    font-size: 18px;
+}
+.content p {
+	text-align: justify;
+}
+.content p span {
+	font-size: 48px;
+	margin-right: 20px;
+    color: dodgerblue;
+}
+.socials i {
+	margin-right: 25px;
+}
+.bio h4 {
+	font-size: 1rem;
+    font-weight: 500;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.carousel-control-next-icon, .carousel-control-prev-icon {
+	background-color: dodgerblue;
+}
+
+/* contact */
+#contact{
+    margin-top: -150px;
+}
+#contact img{
+    width: 100%;
+}
+#contact form button{
+    background-color: dodgerblue;
+    margin-top: 20px;
+    color: white;
+}
+form input{
+    margin-bottom: 15px;
+   
+}
+
+
+
+
+
+
+
+
+
+
+
+/* footer */
+
+
+.footer-distributed {
+    background-color: dodgerblue;
+    box-sizing: border-box;
+    width: 100%;
+    text-align: left;
+    font: bold 16px sans-serif;
+    padding: 50px 50px 60px 50px;
+    margin-top: 80px;
+}
+
+.footer-distributed .footer-left, .footer-distributed .footer-center, .footer-distributed .footer-right {
+    display: inline-block;
+    vertical-align: top;
+}
+
+/* Footer left */
+
+.footer-distributed .footer-left {
+    width: 30%;
+}
+
+/* Footer links */
+
+.footer-distributed .footer-links {
+    color: #fcfcfc;
+    margin: 20px 0 12px;
+}
+
+.footer-distributed .footer-links a {
+    display: inline-block;
+    line-height: 1.8;
+    text-decoration: none;
+    color: inherit;
+}
+
+.footer-distributed .footer-company-name {
+    color: black;
+    font-size: 14px;
+    font-weight: normal;
+    margin: 0;
+}
+
+/* Footer Center */
+
+.footer-distributed .footer-center {
+    width: 35%;
+}
+
+.footer-distributed .footer-center svg {
+    
+    color: #000000;
+    font-size: 5px;
+    width: 25px;
+    height: 25px;
+    border-radius: 10%;
+    text-align: center;
+  
+    margin-top: -20px;
+    margin-bottom: -10px;
+    vertical-align: middle;
+}
+
+
+.footer-distributed .footer-center p {
+    display: inline-block;
+    color: #ffffff;
+    vertical-align: middle;
+    margin: 0;
+}
+
+
+.footer-distributed .footer-center p a {
+    color: white;
+    text-decoration: none;
+    ;
+}
+
+/* Footer Right */
+
+.footer-distributed .footer-right {
+    width: 30%;
+}
+
+.footer-distributed .footer-company-about {
+    line-height: 20px;
+    color: #ffffff;
+    font-size: 15px;
+    font-weight: normal;
+    margin: 0;
+}
+
+.footer-distributed .footer-company-about span {
+    display: block;
+    color: #000000;
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.footer-distributed .footer-icons {
+    margin-top: 25px;
+}
+
+.footer-distributed .footer-icons a svg {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    background-color:dodgerblue;
+    border-radius: 10px;
+    color: black;
+    text-align: center;
+    line-height: 35px;
+    margin-right: 15px;
+    margin-bottom: 5px;
+}
+
+
+
+.footer-links a:hover {
+    color: #000000;
+}
+
+@media (max-width: 880px) {
+   
+    footer{
+        height: auto;
+        
+    }
+  
+    .footer-distributed h3 img{
+        width: 120%;
+    }
+    .footer-distributed .footer-links{
+        display: none;
+    }
+
+    .footer-center{
+        margin-left: 100px;
+        margin-top: 15px;
+    }
+    .footer-center p{
+        font-size: 12px;
+    }
+   .footer-distributed .footer-center svg{
+        width: 22px;
+        height: 22px;
+        margin-top: -10px;
+        margin-bottom: 0px;
+    }
+   .footer-icons{
+    display: flex;
+    flex-direction: row;
+   }
+   .footer-distributed .footer-icons a svg{
+    width: 30px;
+    height: 20px;
+    margin-top: -30px;
+   }
+
+
+ .footer-company-about{
+        display: none;
+    }
+}       
+        
+/* footer end */
+
+
+@media(max-width:768px){
+    .marq{
+        position: absolute;
+        top: 11%;
+        font-weight: 500;
+        background: transparent;
+        color: white;
+        font-family: 'Tektur', cursive;
+        font-family: 'Yatra One', cursive;
+    }
+    
+    #home{
+        background: linear-gradient(rgba(0,0,0,.8),rgba(0,0,0,1)),url(imgs/mobbackground.png);
+        background-repeat: no-repeat;
+        height: 100vh;
+        background-size: cover;
+        background-position: center;
+    }
+    .headline{
+        font-size: 40px;
+        font-weight: 700;
+        color: white;
+        text-align: center;
+        text-transform: capitalize;
+    }
+    #home p{
+        font-size: 11px;
+    }
+}
+@media(min-width:769px){
+    .marq{
+        display: none;
+    }
+}
